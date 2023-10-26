@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'DevRise',
   description: 'DevRise Landing Page',
+  icons: 'https://res.cloudinary.com/ds41xxspf/image/upload/v1698355225/DevRise/black-yellow_hzqxlw.png'
 }
 
 export default function RootLayout({
