@@ -11,8 +11,8 @@ const config: Config = {
       colors: {
         yellow: '#E6B31E',
         white: '#FCFAF1',
-        dark: '#343434',
-        gray: 'CACACA'
+        dark: '#1d1d1e',
+        gray: '#CACACA'
       },
     },
   },
