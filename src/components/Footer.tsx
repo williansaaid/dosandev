@@ -50,8 +50,8 @@ const Footer = () => {
                                 classNameText='hover:text-yellow ease duration-500'
                             />
                             <CustomLink
-                                href='/terms-and-conditions'
-                                title='Términos y Condiciones'
+                                href='/blog'
+                                title='Nuestro Blog'
                                 classNameText='hover:text-yellow ease duration-500'
                             />
                         </div>
@@ -70,11 +70,6 @@ const Footer = () => {
                             <CustomLink
                                 href='/about-us'
                                 title='Quiénes Somos'
-                                classNameText='hover:text-yellow ease duration-500'
-                            />
-                            <CustomLink
-                                href='/consulting'
-                                title='Contacto'
                                 classNameText='hover:text-yellow ease duration-500'
                             />
                         </div>

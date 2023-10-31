@@ -19,7 +19,7 @@ const Navbar = () => {
 
     return (
         <header
-            className='w-full h-[100px] px-8 sm:px-16 md:px-24 lg:px-32 2xl:px-56 font-medium flex items-center justify-between sticky top-0 z-10 backdrop-blur-2xl select-none text-xl shadow-lg'
+            className='w-full h-[100px] px-8 sm:px-16 md:px-24 xl:px-32 2xl:px-56 font-medium flex items-center justify-between sticky top-0 z-10 bg-yellow/10 bg-clip-padding backdrop-filter backdrop-blur-md select-none text-xl shadow-lg'
         >
             <div className='w-4/6 h-[70%] xs:w-3/6 xs:h-[80%] sm:w-2/5 sm:h-[80%] lg:w-2/6 lg:h-[100%] xl:w-1/5'>
                 <Link
@@ -41,13 +41,12 @@ const Navbar = () => {
                 handleClick={handleClickMenuMobile}
             />
 
-            <div className='hidden justify-between items-center lg:flex'>
-                <nav className='flex gap-8'>
-                    <CustomLink href='/' title='Inicio'/>
-                    <CustomLink href='/about-us' title='Sobre Nosotros'/>
-                    <CustomLink href='/consulting' title='Asesoría'/>
-                </nav>
-            </div>
+            <nav className='hidden justify-between items-center lg:flex gap-6 xl:gap-8'>
+                <CustomLink href='/' title='Inicio'/>
+                <CustomLink href='/consulting' title='Asesoría'/>
+                <CustomLink href='/blog' title='Blog'/>
+                <CustomLink href='/about-us' title='Sobre Nosotros'/>
+            </nav>
 
             { isOpenMobile ?
                 <motion.div
@@ -66,8 +65,9 @@ const Navbar = () => {
 
                         <nav className='flex items-center flex-col justify-center gap-6'>
                             <CustomMobileLink href='/' title='Inicio' toggle={handleClickMenuMobile}/>
-                            <CustomMobileLink href='/about-us' title='Sobre Nosotros' toggle={handleClickMenuMobile}/>
                             <CustomMobileLink href='/consulting' title='Asesoría' toggle={handleClickMenuMobile}/>
+                            <CustomMobileLink href='/blog' title='Blog' toggle={handleClickMenuMobile}/>
+                            <CustomMobileLink href='/about-us' title='Sobre Nosotros' toggle={handleClickMenuMobile}/>
                         </nav>
 
                         <hr className="text-yellow h-0.5 w-1/2 my-2"/>

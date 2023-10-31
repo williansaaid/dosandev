@@ -18,10 +18,12 @@ const CustomLink = ({href, title, className="", classNameText="", underline=true
 
     return (
         <Link href={href}
-            className={`${className} relative group text-first`}
+            className={`${className} relative group text-center`}
             onClick={onClick}
         >
-            <p className={classNameText}>{title}</p>
+            <p className={`${classNameText} ${pathname === href ? "text-yellow" : "text-white"}`}>
+                {title}
+            </p>
             {
                 underline &&
                 <span

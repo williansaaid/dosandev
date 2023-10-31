@@ -7,10 +7,17 @@ interface Props {
     title: string;
     toggle: () => void;
     className?: string;
+    classNameText?: string;
 }
 
 
-const CustomMobileLink = ({href, title, className="", toggle}: Props) => {
+const CustomMobileLink = ({
+    href,
+    title,
+    className="",
+    classNameText,
+    toggle
+}: Props) => {
     const router = useRouter();
     const pathname = usePathname();
 
@@ -23,7 +30,9 @@ const CustomMobileLink = ({href, title, className="", toggle}: Props) => {
         <button className={`${className} relative group`}
             onClick={handleClick}
         >
-            {title}
+            <p className={`${classNameText} ${pathname === href ? "text-yellow" : "text-white"}`}>
+                {title}
+            </p>
             <span
                 className={`h-[1px] inline-block absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 bg-yellow ${pathname === href ? "w-full" : "w-0"}`}
             >
