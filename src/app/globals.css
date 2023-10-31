@@ -9,24 +9,25 @@
 /* Scrollbar for firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: var(--white) var(--dark);
+    scrollbar-color: var(--yellow) var(--dark);
     scroll-behavior: smooth;
 }
 /* Scrollbar for another browsers */
 *::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
     border-radius: 0px;
 }
 
 *::-webkit-scrollbar-track {
-    background: var(--white);
+    background: var(--dark);
     border-radius: 0px;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--dark);
+    background-color: var(--yellow);
     border-radius: 10px;
-    border: 3px solid var(--white);
+    border: 3px solid var(--dark);
 }
 
 *::selection {
