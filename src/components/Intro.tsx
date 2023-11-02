@@ -9,7 +9,7 @@ const Intro = () => {
                     <div className="container relative mx-auto">
                     <div className="items-center flex flex-wrap">
                         <div className="w-full lg:w-6/12 px-2 ml-auto mr-auto text-center">
-                            <div className="pr-12">
+                            <div className="flex flex-col justify-center items-center content-center ">
                                 <h1 className="text-d font-semibold text-5xl text-yellow">
                                 Tu negocio presente al mundo.
                                 </h1>
