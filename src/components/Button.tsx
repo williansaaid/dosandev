@@ -1,11 +1,12 @@
 import Link from 'next/link';
 
 interface Props {
-    href: string
-    text: string
-    className?: string
-    download?: boolean
-    children?: React.JSX.Element
+    href: string;
+    text: string;
+    className?: string;
+    download?: boolean;
+    children?: React.JSX.Element;
+    textStyle?: string;
 }
 
 const Button = ({
@@ -13,15 +14,21 @@ const Button = ({
     className,
     download=false,
     text,
-    children
+    children,
+    textStyle
     }: Props ) => {
     return (
         <Link
             href={href}
-            className={`flex items-center text-center justify-center border-2 py-2 px-4 rounded-xl text-lg font-semibold ${className}`}
+            className={`flex items-center text-center justify-center py-2 px-4 rounded-xl font-semibold ${className}`}
             download={download}
+            target='_BLANK'
         >
-            <p>{ text }</p>
+            <p
+                className={textStyle}
+            >
+                { text }
+            </p>
             {children && <div className="w-6 h-auto ml-1">
                 { children }
             </div>}

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 interface Props {
     title: string;
-    text: string;
+    text?: string;
     titleStyle?: string;
     textStyle?: string;
     styleComponent?: string;
@@ -31,11 +31,14 @@ const TitleAndText = ({
             >
                 {title}
             </h3>
-            <p
-                className={`${textStyle}`}
-            >
-                {text}
-            </p>
+            {
+                text &&
+                <p
+                    className={`${textStyle}`}
+                >
+                    {text}
+                </p>
+            }
         </motion.div>
     )
 }
