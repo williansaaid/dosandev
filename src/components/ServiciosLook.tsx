@@ -6,8 +6,8 @@ const ServiciosLook = () => {
             <div className=" flex flex-col sm:flex-row ">
                 <div className='px-10'>
                     <h3 className='text-5xl text-yellow font-bold mb-6 text-center sm:text-left'>Servicios</h3>
-                    <p className='text-center sm:text-left text-xl'>A continuación, puedes observar los principales servicios que ofrezco
-                    como profesional.</p>
+                    <p className='text-center sm:text-left text-xl'>A continuación, puedes observar los principales servicios que ofrezcemos
+                    como profesionales.</p>
                 </div>
                 <div className='sm:grid sm:grid-cols-3 sm:gap-5 sm:w-full'>
                     {/* servicio */}

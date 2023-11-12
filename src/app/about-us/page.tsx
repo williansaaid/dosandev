@@ -20,8 +20,8 @@ export default function AboutUs() {
                 <ServiciosLook/>
                 {/* Projectos */}
                 <h3 className='text-5xl text-yellow font-bold mt-20 mb-10 text-center sm:text-left'>Proyectos realizados</h3>
-                    <p className='text-center mb-10 sm:text-left text-xl'>A continuación, puedes observar los principales servicios que ofrezco
-                    como profesional.</p>
+                    <p className='text-center mb-10 sm:text-left text-xl'>A continuación, puedes observar los principales proyectos que ofrecemos
+                    como profesionales.</p>
 
                     <div className="flex flex-wrap sm:flex-row">
 
