@@ -24,7 +24,7 @@ const CardProject: React.FC<CardProjectProps> = ({
     
     return (
         <> 
-            <div className="rounded-3xl bg-white max-h-min m-3 overflow-hidden shadow-lg sm:max-h-full sm:max-w-xs">
+            <div className="rounded-3xl bg-white max-h-min m-3 overflow-hidden shadow-lg sm:max-h-full sm:max-w-xs mx-5 sm:mx-3">
                 <img className="w-full" src={img} alt="Sunset in the mountains"/>
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2 text-black">{titulo}</div>
@@ -41,7 +41,7 @@ const CardProject: React.FC<CardProjectProps> = ({
                 </div>
                 <div className=" flex flex-row justify-center mx-2 mt-5 mb-3">
                     <Button href={linkWeb} icon={<MdOutlinePageview/>} text="Visualizar"
-                    className="text-black bg-yellow"/>
+                    className="text-black bg-yellow hover:bg-slate-400"/>
                 </div>
             </div>
         </>
