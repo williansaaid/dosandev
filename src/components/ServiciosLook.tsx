@@ -1,27 +1,78 @@
+"use client"
+import { useEffect, useState} from 'react'
+
 import '../../src/app/globals.css'
 import AnimatedDiv from './AnimatedDiv'
 import AnimatedText from "./AnimatedText";
 
 const ServiciosLook = () => {
+    const [scrollPosition, setScrollPosition] = useState(0);
+  const [moverHeight, setMoverHeight] = useState(0);
+  const [containerHeight, setContainerHeight] = useState(0);
+
+  const handleScroll = () => {
+    const newPosition = window.scrollY;
+    const bottomMover = newPosition + moverHeight;
+    const bottomContainer = containerHeight;
+
+    if (bottomMover <= bottomContainer) {
+      setScrollPosition(newPosition);
+    } else {
+      setScrollPosition(bottomContainer - moverHeight);
+    }
+  };
+
+  useEffect(() => {
+    const moverElement = document.getElementById('mover');
+    const containerElement = document.getElementById('container');
+
+    if (moverElement) {
+      setMoverHeight(moverElement.clientHeight);
+    }
+
+    if (containerElement) {
+      setContainerHeight(containerElement.clientHeight);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [moverHeight, containerHeight]);
+
+
+
+  // Ajusta el cálculo para que el div se mueva hacia abajo
+  const translateY = `translateY(${scrollPosition}px)`;
+  console.log(`translateY: ${translateY}`);
+
     return (
         <>
 
-            <div className=" flex flex-col sm:flex-row ">
-                <div className='px-10'>
+        <div className=" flex flex-col sm:flex-row ">
+            <div className="px-10"
+                style={{
+                   position:'relative',
+                   top: `${scrollPosition}px`,
+                }}
+                id='container'
+                >
+                <div className={`transform ${translateY} transition-transform`} id='mover'>
                     <AnimatedText
-                        text="Servicios"
-                        className="text-5xl text-yellow font-bold mb-6 text-center sm:text-left"
-                        stylesWords="hover:text-white"
-                        fromTop
+                    text="Servicios"
+                    className="text-5xl text-yellow font-bold mb-6 text-center sm:text-left"
+                    stylesWords="hover:text-white"
+                    fromTop
                     />
                     <AnimatedText
-                        text="A continuación, puedes observar los principales servicios que ofrezcemos
-                        como profesionales."
-                        className="text-center sm:text-left text-xl"
-                        stylesWords="hover:text-white"
-                        fromTop
+                    text="A continuación, puedes observar los principales servicios que ofrecemos como profesionales."
+                    className="text-center sm:text-left text-xl"
+                    stylesWords="hover:text-white"
+                    fromTop
                     />
                 </div>
+            </div>
                 <div className='sm:grid sm:grid-cols-3 sm:gap-5 sm:w-full'>
                     {/* servicio */}
                     <AnimatedDiv delay={0.5} y={50}>
