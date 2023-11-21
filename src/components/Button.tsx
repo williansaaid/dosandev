@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ReactElement } from 'react';
 
 interface Props {
     href: string;
@@ -7,6 +8,7 @@ interface Props {
     download?: boolean;
     children?: React.JSX.Element;
     textStyle?: string;
+    icon?: ReactElement
 }
 
 const Button = ({
