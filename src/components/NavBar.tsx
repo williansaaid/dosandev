@@ -19,7 +19,7 @@ const Navbar = () => {
 
     return (
         <header
-            className='w-full h-[100px] px-8 sm:px-16 md:px-24 xl:px-32 2xl:px-56 font-medium flex items-center justify-between sticky top-0 z-10 bg-yellow/10 bg-clip-padding backdrop-filter backdrop-blur-md select-none text-xl shadow-lg'
+            className='w-full h-[100px] px-8 sm:px-16 md:px-24 xl:px-32 2xl:px-56 font-medium flex items-center justify-between sticky top-0 z-50 bg-yellow/10 bg-clip-padding backdrop-filter backdrop-blur-md select-none text-xl shadow-lg'
         >
             <div className='w-4/6 h-[70%] xs:w-3/6 xs:h-[80%] sm:w-2/5 sm:h-[80%] lg:w-2/6 lg:h-[100%] xl:w-1/5'>
                 <Link
