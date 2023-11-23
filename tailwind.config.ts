@@ -23,6 +23,10 @@ const config: Config = {
         'yellowShadow': '15px 15px 100px -20px rgba(230,179,30,0.2)'
       }
     },
+    backgroundImage: {
+      code: "url('https://res.cloudinary.com/ds41xxspf/image/upload/v1700701316/DevRise/pexels-pixabay-270408_mg1trt.jpg')",
+      darkMountain: "url('https://res.cloudinary.com/ds41xxspf/image/upload/v1700705088/DevRise/pexels-eberhard-grossgasteiger-2098427_edivfk.jpg')"
+    }
   },
   plugins: [],
 }

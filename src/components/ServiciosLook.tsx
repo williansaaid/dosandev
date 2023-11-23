@@ -45,29 +45,33 @@ const ServiciosLook = () => {
     return (
         <div className="flex flex-col md:flex-row w-full gap-4 sm:gap-8 md:gap-12">
             <div
-                style={{
-                    position:'relative',
-                    top: `${scrollPosition}px`,
-                }}
-                id='container'
-                className='w-full md:w-1/2'
+                className='bg-darkMountain bg-cover bg-left w-full md:w-1/2 rounded-3xl pt-4 overflow-hidden'
             >
                 <div
-                    className={`transform-${translateY} transition-transform py-4`}
-                    id='mover'
+                    style={{
+                        position:'relative',
+                        top: `${scrollPosition}px`,
+                    }}
+                    id='container'
+                    className='w-full h-fit backdrop-blur-sm py-4'
                 >
-                    <AnimatedText
-                        text="Servicios"
-                        className="font-bold text-center text-4xl sm:text-5xl md:text-6xl xl:text-7xl text-yellow"
-                        stylesWords="hover:text-white"
-                        fromTop
-                    />
-                    <AnimatedText
-                        text="A continuación, puedes observar los principales servicios que ofrecemos como profesionales."
-                        className="text-center text-xl sm:text-2xl md:text-3xl xl:text-4xl font-medium text-gray"
-                        stylesWords="hover:text-white"
-                        fromTop
-                    />
+                    <div
+                        className={`transform-${translateY} transition-transform`}
+                        id='mover'
+                    >
+                        <AnimatedText
+                            text="Servicios"
+                            className="font-bold text-center text-4xl sm:text-5xl md:text-6xl xl:text-7xl text-yellow"
+                            stylesWords="hover:text-white"
+                            fromTop
+                        />
+                        <AnimatedText
+                            text="A continuación, puedes observar los principales servicios que ofrecemos como profesionales."
+                            className="text-center text-xl sm:text-2xl md:text-3xl xl:text-4xl font-medium text-gray"
+                            stylesWords="hover:text-white"
+                            fromTop
+                        />
+                    </div>
                 </div>
             </div>
             <div
