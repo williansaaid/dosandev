@@ -1,78 +1,68 @@
 "use client"
-import { useEffect, useState} from 'react'
+import { useEffect, useRef, useState} from 'react';
+import { motion } from "framer-motion";
 import AnimatedText from "./AnimatedText";
 import CardServices from './CardServices';
 
 const ServiciosLook = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [moverHeight, setMoverHeight] = useState(0);
-    const [containerHeight, setContainerHeight] = useState(0);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     const handleScroll = () => {
-        const newPosition = window.scrollY;
-        const bottomMover = newPosition + moverHeight;
-        const bottomContainer = containerHeight;
+        const containerElement = containerRef.current;
 
-        if (bottomMover <= bottomContainer) {
-        setScrollPosition(newPosition);
-        } else {
-        setScrollPosition(bottomContainer - moverHeight);
+        if (containerElement) {
+        const maxScrollPosition = containerElement.scrollHeight - window.innerHeight;
+
+        setScrollPosition(() => {
+            const newPosition = window.scrollY;
+
+            if (newPosition >= 0 && newPosition <= maxScrollPosition) {
+            return newPosition;
+            }
+
+            if (newPosition < 0) {
+            return 0;
+            }
+
+            return maxScrollPosition;
+        });
         }
     };
 
     useEffect(() => {
-        const moverElement = document.getElementById('mover');
-        const containerElement = document.getElementById('container');
-
-        if (moverElement) {
-        setMoverHeight(moverElement.clientHeight);
-        }
-
-        if (containerElement) {
-        setContainerHeight(containerElement.clientHeight);
-        }
-
         window.addEventListener('scroll', handleScroll);
 
         return () => {
-        window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', handleScroll);
         };
-    }, [moverHeight, containerHeight]);
-
-    // Ajusta el cálculo para que el div se mueva hacia abajo
-    const translateY = `translateY(${scrollPosition}px)`;
+    }, []);
 
     return (
         <div className="flex flex-col md:flex-row w-full gap-4 sm:gap-8 md:gap-12">
             <div
-                className='bg-darkMountain bg-cover bg-left w-full md:w-1/2 rounded-3xl pt-4 overflow-hidden'
+                className='bg-darkMountain bg-cover bg-left w-full md:w-1/2 rounded-3xl overflow-hidden'
+                ref={containerRef}
             >
-                <div
+                <motion.div
                     style={{
-                        position:'relative',
-                        top: `${scrollPosition}px`,
+                        transform: `translateY(${scrollPosition}px)`,
                     }}
-                    id='container'
-                    className='w-full h-fit backdrop-blur-sm py-4'
+                    className={`w-full h-fit backdrop-blur-sm py-4 duration-200 ease`}
                 >
-                    <div
-                        className={`transform-${translateY} transition-transform`}
-                        id='mover'
-                    >
-                        <AnimatedText
-                            text="Servicios"
-                            className="font-bold text-center text-4xl sm:text-5xl md:text-6xl xl:text-7xl text-yellow"
-                            stylesWords="hover:text-white"
-                            fromTop
-                        />
-                        <AnimatedText
-                            text="A continuación, puedes observar los principales servicios que ofrecemos como profesionales."
-                            className="text-center text-xl sm:text-2xl md:text-3xl xl:text-4xl font-medium text-gray"
-                            stylesWords="hover:text-white"
-                            fromTop
-                        />
-                    </div>
-                </div>
+                    <AnimatedText
+                        text="Servicios"
+                        className="font-bold text-center text-4xl sm:text-5xl md:text-6xl xl:text-7xl text-yellow"
+                        stylesWords="hover:text-white"
+                        fromTop
+                    />
+                    <AnimatedText
+                        text="A continuación, puedes observar los principales servicios que ofrecemos como profesionales."
+                        className="text-center text-xl sm:text-2xl md:text-3xl xl:text-4xl font-medium text-gray"
+                        stylesWords="hover:text-white"
+                        fromTop
+                    />
+                </motion.div>
             </div>
             <div
                 className='flex flex-wrap justify-center items-center w-full md:w-1/2 gap-8'

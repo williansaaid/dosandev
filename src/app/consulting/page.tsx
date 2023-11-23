@@ -45,6 +45,7 @@ export default function Consulting() {
                             alt="Programador"
                             fill
                             className='w-full h-full object-cover'
+                            sizes="(min-width: 768px) 33.3vw, (max-width: 768px) 100vw"
                             priority draggable={false}
                         />
                     </div>
