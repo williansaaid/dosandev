@@ -44,7 +44,7 @@ const Navbar = () => {
             <nav className='hidden justify-between items-center lg:flex gap-6 xl:gap-8'>
                 <CustomLink href='/' title='Inicio'/>
                 <CustomLink href='/consulting' title='Asesoría'/>
-                <CustomLink href='/blog' title='Blog'/>
+                {/* <CustomLink href='/blog' title='Blog'/> */}
                 <CustomLink href='/about-us' title='Sobre Nosotros'/>
             </nav>
 
@@ -66,7 +66,7 @@ const Navbar = () => {
                         <nav className='flex items-center flex-col justify-center gap-6'>
                             <CustomMobileLink href='/' title='Inicio' toggle={handleClickMenuMobile}/>
                             <CustomMobileLink href='/consulting' title='Asesoría' toggle={handleClickMenuMobile}/>
-                            <CustomMobileLink href='/blog' title='Blog' toggle={handleClickMenuMobile}/>
+                            {/* <CustomMobileLink href='/blog' title='Blog' toggle={handleClickMenuMobile}/> */}
                             <CustomMobileLink href='/about-us' title='Sobre Nosotros' toggle={handleClickMenuMobile}/>
                         </nav>
 

@@ -13,7 +13,7 @@ export default function AboutUs() {
                 <meta name="description" content="Una breve descripción de los integrantes del equipo Devrise"/>
             </Head>
             <main
-                className="flex items-center flex-col min-h-screen h-fit pt-4 md:pt-8 xl:pt-10 w-full lg:w-10/12 bg-dark px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 xl:px-24"
+                className="flex items-center flex-col min-h-screen h-fit pt-4 md:pt-8 xl:pt-10 w-full lg:w-10/12 bg-dark px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 pb-24 border-b-2 border-solid border-gray"
             >
                 <ServiciosLook/>
                 <AnimatedText

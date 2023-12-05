@@ -1,60 +1,54 @@
 "use client"
-import { useEffect, useState} from 'react'
+import { useEffect, useRef, useState} from 'react';
+import { motion } from "framer-motion";
 import AnimatedText from "./AnimatedText";
 import CardServices from './CardServices';
 
 const ServiciosLook = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [moverHeight, setMoverHeight] = useState(0);
-    const [containerHeight, setContainerHeight] = useState(0);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     const handleScroll = () => {
-        const newPosition = window.scrollY;
-        const bottomMover = newPosition + moverHeight;
-        const bottomContainer = containerHeight;
+        const containerElement = containerRef.current;
 
-        if (bottomMover <= bottomContainer) {
-        setScrollPosition(newPosition);
-        } else {
-        setScrollPosition(bottomContainer - moverHeight);
+        if (containerElement) {
+        const maxScrollPosition = containerElement.scrollHeight;
+
+        setScrollPosition(() => {
+            const newPosition = window.scrollY;
+
+            if (newPosition >= 0 && newPosition <= maxScrollPosition) {
+            return newPosition;
+            }
+
+            if (newPosition < 0) {
+            return 0;
+            }
+
+            return maxScrollPosition;
+        });
         }
     };
 
     useEffect(() => {
-        const moverElement = document.getElementById('mover');
-        const containerElement = document.getElementById('container');
-
-        if (moverElement) {
-        setMoverHeight(moverElement.clientHeight);
-        }
-
-        if (containerElement) {
-        setContainerHeight(containerElement.clientHeight);
-        }
-
         window.addEventListener('scroll', handleScroll);
 
         return () => {
-        window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', handleScroll);
         };
-    }, [moverHeight, containerHeight]);
-
-    // Ajusta el cálculo para que el div se mueva hacia abajo
-    const translateY = `translateY(${scrollPosition}px)`;
+    }, []);
 
     return (
         <div className="flex flex-col md:flex-row w-full gap-4 sm:gap-8 md:gap-12">
             <div
-                style={{
-                    position:'relative',
-                    top: `${scrollPosition}px`,
-                }}
-                id='container'
-                className='w-full md:w-1/2'
+                className='bg-darkMountain bg-cover bg-left w-full md:w-1/2 rounded-3xl overflow-hidden'
+                ref={containerRef}
             >
-                <div
-                    className={`transform-${translateY} transition-transform py-4`}
-                    id='mover'
+                <motion.div
+                    style={{
+                        transform: `translateY(${scrollPosition}px)`,
+                    }}
+                    className={`w-full h-72 sm:h-fit md:backdrop-blur-sm p-4 duration-200 ease`}
                 >
                     <AnimatedText
                         text="Servicios"
@@ -68,7 +62,7 @@ const ServiciosLook = () => {
                         stylesWords="hover:text-white"
                         fromTop
                     />
-                </div>
+                </motion.div>
             </div>
             <div
                 className='flex flex-wrap justify-center items-center w-full md:w-1/2 gap-8'
