@@ -30,7 +30,7 @@ const Footer = () => {
                             />
                         </div>
                         <p className='text-justify pt-3 sm:pt-0 sm:w-3/4 md:w-full w-full text-md text-gray'>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi doloribus nihil, laborum a rem, voluptas nostrum, delectus culpa incidunt cupiditate error? Numquam vitae, voluptatibus vero quis sed vel culpa earum.
+                            En DevRise estamos comprometidos con la calidad y eficiencia, desde la creación de páginas web cautivadoras hasta el diseño de aplicaciones móviles innovadoras, te proporcionamos soluciones a medida que se alinean con tus objetivos a corto y largo plazo.
                         </p>
                     </span>
                     <div
@@ -49,11 +49,11 @@ const Footer = () => {
                                 href='/consulting'
                                 classNameText='hover:text-yellow ease duration-500'
                             />
-                            <CustomLink
+                            {/* <CustomLink
                                 href='/blog'
                                 title='Nuestro Blog'
                                 classNameText='hover:text-yellow ease duration-500'
-                            />
+                            /> */}
                         </div>
                     </div>
                     <div
