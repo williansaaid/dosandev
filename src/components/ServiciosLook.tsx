@@ -12,7 +12,7 @@ const ServiciosLook = () => {
         const containerElement = containerRef.current;
 
         if (containerElement) {
-        const maxScrollPosition = containerElement.scrollHeight - window.innerHeight;
+        const maxScrollPosition = containerElement.scrollHeight;
 
         setScrollPosition(() => {
             const newPosition = window.scrollY;
@@ -48,7 +48,7 @@ const ServiciosLook = () => {
                     style={{
                         transform: `translateY(${scrollPosition}px)`,
                     }}
-                    className={`w-full h-fit backdrop-blur-sm py-4 duration-200 ease`}
+                    className={`w-full h-72 sm:h-fit md:backdrop-blur-sm p-4 duration-200 ease`}
                 >
                     <AnimatedText
                         text="Servicios"
