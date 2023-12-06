@@ -4,8 +4,8 @@
     --dark: #343434;
     --white: #FCFAF1;
     --yellow: #E6B31E;
+    --sdafsd: #1d1d1e;
 }
-
 /* Scrollbar for firefox */
 * {
     scrollbar-width: thin;
@@ -35,6 +35,28 @@
     color: var(--white)
 }
 
+/* styles.css */
+@keyframes moveUp {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes moveDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+  }
 
 @tailwind components;
 @tailwind utilities;
+
+
+
+

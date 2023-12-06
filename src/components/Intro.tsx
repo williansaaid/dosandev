@@ -19,7 +19,7 @@ const Intro = () => {
                     delay={0.5}
                 >
                     <p className="text-center text-xl sm:text-2xl md:text-3xl xl:text-4xl py-2 font-medium text-gray">
-                        En DEVRISE, damos vida a sus ideas, transformándolas en experiencias web y entendemos la importancia de su presencia en línea.
+                        En DEVRISE, damos vida a sus ideas, transformándolas en experiencias web pues entendemos la importancia de su presencia en línea.
                     </p>
                 </AnimatedDiv>
             </div>
