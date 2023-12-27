@@ -24,7 +24,7 @@ const ContactForm = () => {
         setLoading(true)
         console.log("JSON Data to be sent:", JSON.stringify(formData));
         
-        const response = await fetch('https://backendportafolio-3zy0.onrender.com/send-email', {
+        const response = await fetch('http://localhost:1000/send-email', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ const ContactForm = () => {
                         id="name"
                         name="name"
                         placeholder="Tu nombre..."
-                        className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                        className="text-black mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                         onChange={handleChange}
                         />
                     </div>
@@ -60,7 +60,7 @@ const ContactForm = () => {
                         id="email"
                         name="email"
                         placeholder="Tu direccion email, gmail, etc..."
-                        className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                        className="text-black mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                         onChange={handleChange}
                         />
                     </div>
@@ -71,7 +71,7 @@ const ContactForm = () => {
                         id="message"
                         name="message"  
                         placeholder="Escribe un mensaje..."
-                        className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                        className="text-black mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
                         onChange={handleChange}  
                     ></textarea>
                 </div>
