@@ -24,7 +24,7 @@ const ContactForm = () => {
         setLoading(true)
         console.log("JSON Data to be sent:", JSON.stringify(formData));
         
-        const response = await fetch('http://localhost:1000/send-email', {
+        const response = await fetch('https://backenddevrise.onrender.com/send-email', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
