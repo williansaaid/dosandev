@@ -46,6 +46,7 @@ const Navbar = () => {
                 <CustomLink href='/consulting' title='Asesoría'/>
                 {/* <CustomLink href='/blog' title='Blog'/> */}
                 <CustomLink href='/about-us' title='Sobre Nosotros'/>
+                <CustomLink href='/contact' title='Contacto'/>
             </nav>
 
             { isOpenMobile ?
