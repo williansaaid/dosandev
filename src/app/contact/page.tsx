@@ -8,7 +8,7 @@ const Contact = () => {
                 <div className="mb-4">
                     <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
                     <p className="mt-4 text-base font-semibold uppercase tracking-wide text-white dark:text-blue-200">
-                        Devrise
+                        DOSAN DEV
                     </p>
                     <h2
                         className="font-heading mb-4 font-bold tracking-tight text-yellow-500 dark:text-white text-3xl sm:text-5xl">

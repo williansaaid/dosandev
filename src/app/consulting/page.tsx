@@ -9,7 +9,7 @@ export default function Consulting() {
         <>
             <Head>
                 <title>Asesoría Personalizada</title>
-                <meta name="description" content="Asesoría personalizada de parte de Devrise"/>
+                <meta name="description" content="Asesoría personalizada de parte de DOSAN DEV"/>
             </Head>
             <main
                 className="flex items-center flex-col min-h-screen h-fit w-full bg-dark relative"
@@ -33,7 +33,7 @@ export default function Consulting() {
                                 <p
                                     className="text-center text-xl sm:text-2xl md:text-3xl xl:text-4xl"
                                 >
-                                    En DEVRISE, entendemos que la clave para el éxito en línea va más allá de la simple presencia web.
+                                    En DOSAN DEV, entendemos que la clave para el éxito en línea va más allá de la simple presencia web.
                                 </p>
                             </AnimatedDiv>
                         </div>
