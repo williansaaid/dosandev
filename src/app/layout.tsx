@@ -7,9 +7,9 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'DevRise',
-  description: 'DevRise Landing Page',
-  icons: 'https://res.cloudinary.com/ds41xxspf/image/upload/v1698355225/DevRise/black-yellow_hzqxlw.png'
+  title: 'Dosan Dev',
+  description: 'Dosan Dev...',
+  icons: 'https://res.cloudinary.com/dwowtb0ya/image/upload/v1705537144/devrise/inary_xx7xkb.png'
 }
 
 export default function RootLayout({

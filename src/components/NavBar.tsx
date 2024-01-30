@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { motion } from "framer-motion";
 import CustomMobileLink from './CustomMobileLink';
 
-const logo = 'https://res.cloudinary.com/ds41xxspf/image/upload/v1698355224/DevRise/yellow_cot0gv.png';
+const logo = 'https://res.cloudinary.com/dwowtb0ya/image/upload/v1705539199/devrise/Dosan_dev_3_ewyr5q.svg';
 
 const Navbar = () => {
 
@@ -26,13 +26,15 @@ const Navbar = () => {
                     href='/'
                     className='flex items-center justify-center w-full h-full object-cover relative'
                 >
-                    <Image
+                    {/* <Image
                         src={logo}
                         alt='Logo devrise'
                         fill
-                        className='w-full h-full object-cover'
+                        className='w-full h-full object-cover '
                         priority draggable={false}
-                    />
+                    /> */}
+
+                    <h2 className='text-yellow text-2xl font-extrabold'>DOSAN DEV</h2>
                 </Link>
             </div>
 
@@ -76,7 +78,7 @@ const Navbar = () => {
                         <span
                             className='w-full text-center text-xs text-gray/50'
                         >
-                            {new Date().getFullYear()} &copy; DEVRISE
+                            {new Date().getFullYear()} &copy; DOSAN DEV
                         </span>
                     </motion.div>
                 </motion.div> : null
