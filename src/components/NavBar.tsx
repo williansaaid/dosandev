@@ -71,6 +71,7 @@ const Navbar = () => {
                             <CustomMobileLink href='/consulting' title='Asesoría' toggle={handleClickMenuMobile}/>
                             {/* <CustomMobileLink href='/blog' title='Blog' toggle={handleClickMenuMobile}/> */}
                             <CustomMobileLink href='/about-us' title='Sobre Nosotros' toggle={handleClickMenuMobile}/>
+                            <CustomMobileLink href='/contact' title='Contacto' toggle={handleClickMenuMobile}/>
                         </nav>
 
                         <hr className="text-yellow h-0.5 w-1/2 my-2"/>

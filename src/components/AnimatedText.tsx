@@ -27,7 +27,7 @@ const AnimatedText = ({
     stylesWords
 }: Props) => {
     return (
-        <div className='w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden sm:py-2'>
+        <div className='w-full mx-auto py-4 flex items-center justify-center text-center overflow-hidden'>
             <motion.h1
                 className={` w-full text-first font-bold capitalize ${className}`}
                 variants={quote}
