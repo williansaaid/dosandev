@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import CustomLink from './CustomLink';
 
-const logo = 'https://res.cloudinary.com/ds41xxspf/image/upload/v1698355225/DevRise/light_ilvkuf.png';
+const logo = 'https://res.cloudinary.com/dwowtb0ya/image/upload/v1705538306/devrise/Dosan_dev_2_mntn0l.png';
 
 const Footer = () => {
     return (
@@ -30,7 +30,7 @@ const Footer = () => {
                             />
                         </div>
                         <p className='text-justify pt-3 sm:pt-0 sm:w-3/4 md:w-full w-full text-md text-gray'>
-                            En DevRise estamos comprometidos con la calidad y eficiencia, desde la creación de páginas web cautivadoras hasta el diseño de aplicaciones móviles innovadoras, te proporcionamos soluciones a medida que se alinean con tus objetivos a corto y largo plazo.
+                            En DOSAN DEV estamos comprometidos con la calidad y eficiencia, desde la creación de páginas web cautivadoras hasta el diseño de aplicaciones móviles innovadoras, te proporcionamos soluciones a medida que se alinean con tus objetivos a corto y largo plazo.
                         </p>
                     </span>
                     <div
