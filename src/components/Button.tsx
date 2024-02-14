@@ -8,7 +8,8 @@ interface Props {
     download?: boolean;
     children?: React.JSX.Element;
     textStyle?: string;
-    icon?: ReactElement
+    icon?: ReactElement;
+    target?: '_BLANK' | '_SELF'
 }
 
 const Button = ({
@@ -17,14 +18,15 @@ const Button = ({
     download=false,
     text,
     children,
-    textStyle
+    textStyle,
+    target='_BLANK'
     }: Props ) => {
     return (
         <Link
             href={href}
             className={`flex items-center text-center justify-center py-2 px-4 rounded-xl font-semibold ${className}`}
             download={download}
-            target='_BLANK'
+            target={target}
         >
             <p
                 className={textStyle}

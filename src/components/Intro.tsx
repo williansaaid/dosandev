@@ -51,11 +51,13 @@ const Intro = () => {
             </p>
             <AnimatedDiv
                 y={50}
-                duration={1}
+                duration={0.5}
+                delay={0.5}
             >
                 <Button
-                    href="#"
+                    href="/contact"
                     text="Contáctanos"
+                    target="_SELF"
                     className="hover:text-dark hover:bg-yellow hover:border-yellow text-yellow duration-300 ease-in-out border-4 italic w-fit animate-pulse"
                     textStyle="text-center text-2xl sm:text-3xl md:text-4xl xl:text-5xl py-2 font-bold"
                 />
