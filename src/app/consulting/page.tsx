@@ -182,7 +182,7 @@ export default function Consulting() {
                                 className="sm:py-8"
                             >
                                 <Button
-                                    href="#"
+                                    href="/contact"
                                     text="Contáctanos"
                                     className="hover:text-dark hover:bg-yellow hover:border-yellow text-yellow duration-300 ease-in-out border-4 italic w-fit"
                                     textStyle="text-center text-2xl sm:text-3xl md:text-4xl xl:text-5xl py-2 font-bold"
