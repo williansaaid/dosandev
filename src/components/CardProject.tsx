@@ -6,9 +6,9 @@ interface CardProjectProps {
     img: string;
     titulo: string;
     descripcion: string;
-    icons?: React.ElementType[];
-    iconColors?: string[];
-    iconNames?: string[];
+    icons: React.ElementType[];
+    iconColors: string[];
+    iconNames: string[];
     linkWeb: string;
     altImg: string;
 }
