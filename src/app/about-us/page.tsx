@@ -36,8 +36,8 @@ export default function AboutUs() {
                         titulo='Stock Llantas'
                         descripcion='Landing page que muestra por medio de un buscador la medida de neumatico que el cliente busca.'
                         icons={[BiLogoHtml5, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript, TbBrandVite, BiLogoFirebase]}
-                        // iconColors={["text-orange-600", "text-sky-500", "text-sky-700", "text-blue-600", "text-yellow", "text-yellow"]}
-                        // iconNames={["HTML5", "React", "Tailwind CSS", "TypeScript", "Vite", "Firebase"]}
+                        iconColors={["text-orange-600", "text-sky-500", "text-sky-700", "text-blue-600", "text-yellow", "text-yellow"]}
+                        iconNames={["HTML5", "React", "Tailwind CSS", "TypeScript", "Vite", "Firebase"]}
                         linkWeb='https://llantas.vercel.app/'
                     />
                     <CardProject
@@ -46,8 +46,8 @@ export default function AboutUs() {
                         titulo='Store Future World'
                         descripcion='Landing page que muestra por medio de un buscador la medida de neumatico que el cliente busca.'
                         icons={[BiLogoHtml5, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript, TbBrandVite, BiLogoFirebase]}
-                        // iconColors={["text-orange-600", "text-sky-500", "text-sky-700", "text-blue-600", "text-yellow", "text-yellow"]}
-                        // iconNames={["HTML5", "React", "Tailwind CSS", "TypeScript", "Vite", "Firebase"]}
+                        iconColors={["text-orange-600", "text-sky-500", "text-sky-700", "text-blue-600", "text-yellow", "text-yellow"]}
+                        iconNames={["HTML5", "React", "Tailwind CSS", "TypeScript", "Vite", "Firebase"]}
                         linkWeb='https://nextjs-store-lemon.vercel.app/'
                     />
                     <CardProject
@@ -56,8 +56,8 @@ export default function AboutUs() {
                         titulo='Stock Llantas'
                         descripcion='Landing page que muestra por medio de un buscador la medida de neumatico que el cliente busca.'
                         icons={[BiLogoHtml5, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript, TbBrandVite, BiLogoFirebase]}
-                        // iconColors={["text-orange-600", "text-sky-500", "text-sky-700", "text-blue-600", "text-yellow", "text-yellow"]}
-                        // iconNames={["HTML5", "React", "Tailwind CSS", "TypeScript", "Vite", "Firebase"]}
+                        iconColors={["text-orange-600", "text-sky-500", "text-sky-700", "text-blue-600", "text-yellow", "text-yellow"]}
+                        iconNames={["HTML5", "React", "Tailwind CSS", "TypeScript", "Vite", "Firebase"]}
                         linkWeb='https://llantas.vercel.app/'
                     />
                 </div>
