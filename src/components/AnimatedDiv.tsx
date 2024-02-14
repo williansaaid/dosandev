@@ -12,8 +12,8 @@ interface Props {
 
 const AnimatedDiv = ({
     className,
-    delay=1.5,
-    duration=1.5,
+    delay=1,
+    duration=1,
     children,
     y,
     x,
