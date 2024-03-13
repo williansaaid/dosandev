@@ -22,7 +22,7 @@ const ContactForm = () => {
         e.preventDefault();
         setLoading(true)
         console.log("JSON Data to be sent:", JSON.stringify(formData));
-        const response = await fetch('https://backenddevrise.onrender.com/send-email', {
+        const response = await fetch('https://backend-devrise.vercel.app/send-email', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
